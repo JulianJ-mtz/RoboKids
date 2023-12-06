@@ -1,10 +1,9 @@
 import express from 'express'
-import { contactos } from '../controllers/contacto.js';
-
+import contatosRoutes from './contact_routes.js'
 
 const router = express.Router()
 
-router.use("/contacto", contactos)
+router.use("/contacto", contatosRoutes)
 
 router.all('*', (req, res) => {
 	res.status(404).json({
