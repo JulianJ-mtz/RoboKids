@@ -2,7 +2,7 @@ import { PrismaClient } from "@prisma/client"
 
 const prisma = new PrismaClient
 
-export const contactos = async (req, res) => {
+export const postContactos = async (req, res) => {
     try {
         const  { correo, nombreCompleto, numero, mensaje, asunto } = req.body;
 
@@ -15,12 +15,22 @@ export const contactos = async (req, res) => {
                 asunto: String(asunto)
             }
         })
-
         res.json(contactos)
     } catch (error) {
         if (process.env.NODE_ENV !== 'test') {
             console.log('Error! Could not add the entry:', error)
         }
         res.json({ status: 'error', message: 'Hubo un error al mandar la bitacora'})
+    }
+}
+
+export const getContactos = async (req, res) => {
+    try {
+        const result = await prisma.contact.findMany()
+        res.json(result)
+    } catch (error) {
+        if (process.env.NODE_ENV !== 'test') {
+            console.log('Error! Entry not found:', error)
+        }
     }
 }
