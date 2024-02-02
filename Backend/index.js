@@ -1,7 +1,7 @@
-import dotenv from 'dotenv';
-import express from 'express';
-import bodyParser from 'body-parser';
-import router from './routes/index.js';
+import dotenv from "dotenv";
+import express from "express";
+import bodyParser from "body-parser";
+import router from "./routes/index.js";
 // import os from 'os'; // Import the 'os' module
 
 const app = express();
@@ -18,16 +18,16 @@ dotenv.config();
 //   });
 // });
 
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 app.use(
-  bodyParser.urlencoded({
-    extended: true,
-  })
-)
-app.use(router)
+    bodyParser.urlencoded({
+        extended: true,
+    }),
+);
+app.use(router);
 
 app.listen(PORT, () => {
-  console.log(`Server ready at localhost:${PORT}`)
-})
+    console.log(`Server ready at localhost:${PORT}`);
+});
 
 export default app;
