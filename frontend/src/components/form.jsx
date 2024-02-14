@@ -1,11 +1,11 @@
 export default function Formulario() {
     return (
         <>
-            <container class="mt-4"> 
+            <div className="">
 
-                hola, que tal 
+                hola
 
-            </container>
+            </div>
         </>
     );
 }
