@@ -1,7 +1,7 @@
 export default function Formulario() {
     return (
         <>
-            <div className="">
+            <div class="pt-15">
 
                 hola
 
