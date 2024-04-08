@@ -15,6 +15,7 @@ export const postContactos = async (req, res) => {
                 asunto: String(asunto),
             },
         });
+        console.log('sheeshs')
         res.json(contactos);
     } catch (error) {
         if (process.env.NODE_ENV !== "test") {
@@ -30,6 +31,7 @@ export const postContactos = async (req, res) => {
 export const getContactos = async (req, res) => {
     try {
         const result = await prisma.contact.findMany();
+        console.log('sheeshs')
         res.json(result);
     } catch (error) {
         if (process.env.NODE_ENV !== "test") {
