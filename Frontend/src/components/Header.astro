@@ -1,0 +1,86 @@
+---
+
+---
+
+<!-- <header
+  class="fixed left-0 top-0 mx-auto flex w-full flex-col justify-between py-5 backdrop-blur-sm border-b-2 border-black"
+  id="header"
+>
+  <nav class="flex items-center gap-x-10 opacity-80">
+    <img
+      src="LogoRobokids.png"
+      alt="LOGO"
+      class="flex justify-start ms-12 h-12 w-18"
+    />
+
+    <ul class="flex flex-row gap-x-10 justify-end">
+      <a href="#" class="navbar">Acerca de nosotros</a>
+      <a href="#" class="navbar">Eventos</a>
+      <a href="#" class="navbar">Blogs</a>
+      <a href="#" class="navbar">¡Contactanos!</a>
+    </ul>
+  </nav>
+</header> -->
+<header
+  class="fixed left-0 top-0 mx-auto flex w-full flex-col justify-between py-5 backdrop-blur-sm border-b-2 border-black"
+  id="header"
+>
+  <nav class="flex items-center gap-x-10 opacity-80">
+    <img
+      src="LogoRobokids.png"
+      alt="LOGO"
+      class="flex justify-start ms-14 h-14 w-18"
+    />
+
+    <ul class="flex flex-row gap-x-10 ml-auto mr-12">
+      <a href="#" class="navbar">Acerca de nosotros</a>
+      <a href="#" class="navbar">Eventos</a>
+      <a href="#" class="navbar">Blogs</a>
+      <a href="#" class="navbar">¡Contactanos!</a>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  .navbar {
+    @apply transition hover:text-sky-300 text-xl;
+  }
+
+  .hidden {
+    display: none;
+    position: absolute;
+  }
+
+  #header {
+    transition: top 0.4s ease;
+  }
+</style>
+
+<script class="not ts">
+  document.addEventListener("DOMContentLoaded", function () {
+    let lastScrollTop = 0;
+
+    let scrollCd = false;
+
+    const header = document.getElementById("header");
+
+    window.addEventListener("scroll", function () {
+      let scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+      console.log({ scrollTop }, { lastScrollTop });
+
+      if (scrollTop < 90) {
+        header.style.top = "0";
+      } else if (scrollTop > lastScrollTop) {
+        header.style.top = "-100px";
+      } else if (!scrollCd) {
+        scrollCd = true;
+        this.setTimeout(function () {
+          header.style.top = "0";
+          scrollCd = false;
+        }, 100);
+      }
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    });
+  });
+</script>
