@@ -3,17 +3,19 @@
 ---
 
 <header
-  class="fixed left-0 top-0 mx-auto flex w-full flex-col justify-between py-5 bg-white"
+  class="relative left-0 top-0 flex w-full flex-col items-center py-5 bg-white"
   id="header"
 >
-  <nav class="flex items-center gap-x-10 opacity-80">
-    <img
-      src="LogoRobokids.png"
-      alt="LOGO"
-      class="flex justify-start ms-14 h-14 w-18"
-    />
+  <nav class="flex items-center w-[95%]">
+    <div>
+      <img
+        src="LogoRobokids.png"
+        alt="LOGO"
+        class="flex justify-start h-14 w-18"
+      />
+    </div>
 
-    <ul class="flex flex-row gap-x-10 ml-auto mr-12">
+    <ul class="lg:flex gap-x-10 ml-auto">
       <a href="#" class="navbar">Acerca de nosotros</a>
       <a href="#" class="navbar">Eventos</a>
       <a href="#" class="navbar">Blogs</a>
@@ -26,42 +28,4 @@
   .navbar {
     @apply transition hover:text-green-800 text-xl;
   }
-
-  .hidden {
-    display: none;
-    position: absolute;
-  }
-
-  #header {
-    transition: top 0.4s ease;
-  }
 </style>
-<!-- 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    let lastScrollTop = 0;
-
-    let scrollCd = false;
-
-    const header = document.getElementById("header");
-
-    window.addEventListener("scroll", function () {
-      let scrollTop = window.scrollY || document.documentElement.scrollTop;
-
-      console.log({ scrollTop }, { lastScrollTop });
-
-      if (scrollTop < 90) {
-        header.style.top = "0";
-      } else if (scrollTop > lastScrollTop) {
-        header.style.top = "-100px";
-      } else if (!scrollCd) {
-        scrollCd = true;
-        this.setTimeout(function () {
-          header.style.top = "0";
-          scrollCd = false;
-        }, 100);
-      }
-      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-    });
-  });
-</script> -->
