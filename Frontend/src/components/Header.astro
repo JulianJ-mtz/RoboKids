@@ -3,7 +3,7 @@ import { ModeToggle } from "@/components/mode-toggle";
 ---
 
 <header
-  class="relative left-0 top-0 flex flex-col md:flex-row items-center justify-between w-full py-5 px-4 bg-primary-foreground shadow"
+  class="relative left-0 top-0 flex flex-col md:flex-row items-center justify-between w-full py-3 px-4 bg-primary-foreground shadow"
   id="header"
 >
   <div class="flex flex-col md:flex-row md:items-center">
@@ -12,7 +12,6 @@ import { ModeToggle } from "@/components/mode-toggle";
       <p class="ps-3 text-2xl">Robokids</p>
     </a>
   </div>
-
 
   <ul class="md:flex gap-x-10 ml-auto hidden">
     <li>
@@ -30,10 +29,8 @@ import { ModeToggle } from "@/components/mode-toggle";
   </ul>
 
   <div class="ps-8">
-
     <ModeToggle client:load />
   </div>
-
 </header>
 
 <style>

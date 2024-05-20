@@ -36,16 +36,16 @@ export function ModeToggle() {
           <span className="sr-only">Toggle theme</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
+      <DropdownMenuContent align="start">
         <DropdownMenuItem onClick={() => setThemeState("theme-light")}>
           Light
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setThemeState("dark")}>
           Dark
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setThemeState("system")}>
+        {/* <DropdownMenuItem onClick={() => setThemeState("system")}>
           System
-        </DropdownMenuItem>
+        </DropdownMenuItem> */}
       </DropdownMenuContent>
     </DropdownMenu>
   );

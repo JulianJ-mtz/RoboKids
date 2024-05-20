@@ -1,5 +1,6 @@
 ---
 import LayoutPage from "@/layouts/LayoutPage.astro";
+import TimeLine from "@/components/time-line";
 ---
 
 <LayoutPage>
@@ -7,17 +8,17 @@ import LayoutPage from "@/layouts/LayoutPage.astro";
     <div class="bg-[url('/AboutUs.png')] bg-cover bg-center">
       <div class="bg-blue-500/40 dark:bg-blue-950/70 w-[100%]">
         <div class="py-32 text-center">
-          <h1 class="text-white text-7xl drop-shadow-2xl">Acerca de nosotros</h1>
+          <h1 class="text-white text-7xl drop-shadow-2xl">
+            Acerca de nosotros
+          </h1>
         </div>
       </div>
     </div>
   </div>
 
-
-  <section class="pt-48">
-
-    hola
+  <section class="pt-12 w-full flex justify-center">
+    <div class=" w-full flex items-center justify-center mx-10">
+      <TimeLine client:only/>
+    </div>
   </section>
-
-
 </LayoutPage>
