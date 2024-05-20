@@ -1,0 +1,35 @@
+---
+import { ChevronRightCircleIcon } from "lucide-react";
+import { Button } from "@/components/ui/button";
+---
+
+<section class="bg-yellowRk dark:bg-primary-foreground">
+  <div class="flex flex-col md:flex-row items-center">
+    <div
+      class="md:basis-1/2 flex flex-col justify-center items-center p-8 md:p-12"
+    >
+      <h1 class="text-center text-4xl md:text-6xl mb-4">¡Hola!</h1>
+      <p class="text-center text-xl md:text-2xl px-4 md:px-24">
+        Te damos la bienvenida a la página oficial de Robokids CSN. ¡Aquí
+        encontrarás información acerca de nosotros, noticias, eventos y mucho
+        más!
+      </p>
+
+      <div class="flex flex-row-reverse pt-5">
+        <Button size={"icon"} variant={"ghost"} className="rounded-full">
+          <a href="/aboutUs">
+            <ChevronRightCircleIcon className="w-8 h-8" />
+          </a>
+        </Button>
+      </div>
+    </div>
+
+    <div class="md:basis-1/2">
+      <img
+        src="robot.png"
+        alt="Robot"
+        class="object-contain w-full h-full md:max-h-[500px]"
+      />
+    </div>
+  </div>
+</section>
