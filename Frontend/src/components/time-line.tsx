@@ -42,7 +42,7 @@ const Timeline = () => {
   const [activeIndex, setActiveIndex] = React.useState<number | null>(0);
 
   return (
-    <div className="relative ">
+    <div className="relative">
       <div className="absolute top-3 left-0 h-0.5 bg-gray-300/50 w-[100%] z-0"></div>
 
       <div className="flex  overflow-x-auto justify-center">
