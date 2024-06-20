@@ -50,6 +50,7 @@ const Timeline = () => {
           {items.map((item, index) => (
             <li key={index} className="flex flex-col items-center">
               <button
+                title="timeline"
                 onClick={() => {
                   console.log(index);
                   setActiveIndex(index);
